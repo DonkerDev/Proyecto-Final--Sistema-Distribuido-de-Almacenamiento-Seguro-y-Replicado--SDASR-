@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servidor-almacenamiento
+  labels:
+    app: almacenamiento
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: almacenamiento
+  template:
+    metadata:
+      labels:
+        app: almacenamiento
+    spec:
+      containers:
+      - name: servidor
+        image: servidor-almacenamiento:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+        env:
+        - name: HOSTNAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        volumeMounts:
+        - name: storage
+          mountPath: /app/archivos
+      volumes:
+      - name: storage
+        emptyDir: {}

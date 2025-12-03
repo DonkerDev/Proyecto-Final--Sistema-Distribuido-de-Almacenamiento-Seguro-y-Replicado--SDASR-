@@ -1,0 +1,7 @@
+[2025-12-02 11:20:26] prueba.txt | Hash: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f | Estado: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.
+[2025-12-02 11:32:46] prueba.txt | Hash: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f | Estado: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.
+[2025-12-02 11:33:15] prueba.txt | Hash: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f | Estado: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.
+[2025-12-02 11:41:56] prueba.txt | Hash: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f | Estado: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.
+[2025-12-02 11:48:38] prueba.txt | Hash: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f | Estado: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.
+[2025-12-02 11:51:17] prueba.txt | Hash: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f | Estado: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.
+[2025-12-02 11:52:06] DEISI_TAREAUNICA-2P.docx | Hash: 99b2323d51157c448dc1c2dee4a8b9852e0760bff80717ada4135eda1ba8e866 | Estado: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.

@@ -1,0 +1,77 @@
+levantar lo que sea xd y ver ip y puerto 
+
+PS C:\Users\Daniel\Desktop\proyecto-almacenamiento\kubernetes> kubectl expose deployment servidor-almacenamiento --type=NodePort --port=5000 --name=servicio-almacenamiento
+service/servicio-almacenamiento exposed
+PS C:\Users\Daniel\Desktop\proyecto-almacenamiento\kubernetes> minikube service servicio-almacenamiento --url
+http://127.0.0.1:57000
+! Porque estás usando controlador Docker en windows, la terminal debe abrirse para ejecutarlo.
+
+
+------------------
+
+
+PS C:\Users\Daniel\Desktop\proyecto-almacenamiento\cliente> python cliente.py
+============================================================
+CLIENTE DE ALMACENAMIENTO SEGURO
+Con encriptación AES-256 y verificación SHA-256
+============================================================
+Ingresa la IP del servidor (localhost para Minikube): 127.0.0.1
+Ingresa el puerto (30007 para NodePort): 57000
+
+Configuración:
+- Servidor: 127.0.0.1:57000
+- Clave de encriptación: TuClaveSecreta32...
+
+
+==================================================
+PROCESANDO ARCHIVO: prueba.txt
+Ruta: C:/Users/Daniel/Desktop/prueba.txt
+Tamaño original: 33 bytes
+==================================================
+
+Generando clave de encriptación...
+Clave Fernet generada: 44 bytes
+
+Encriptando archivo...
+Hash SHA-256 calculado: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f
+Archivo encriptado. Tamaño original: 33 bytes
+Tamaño encriptado: 140 bytes
+
+    RESUMEN DE OPERACIÓN:
+    ---------------------
+    Nombre archivo: prueba.txt
+    Hash SHA-256: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f
+    Tamaño encriptado: 140 bytes
+    Clave usada: TuClaveSecreta32...
+
+    El archivo ha sido:
+    1. Leído del disco ✓
+    2. Hasheado (SHA-256) ✓
+    3. Encriptado (AES-256) ✓
+    4. Preparado para envío ✓
+
+
+Conectando al servidor 127.0.0.1:57000...
+✓ Conexión establecida con el servidor
+Enviando metadatos...
+✓ Metadatos recibidos por el servidor
+Enviando archivo encriptado...
+Progreso: 100.0% (140/140 bytes)
+✓ Archivo enviado completamente: 140 bytes
+
+Respuesta del servidor: ERROR: Fernet key must be 32 url-safe base64-encoded bytes.
+
+==================================================
+TRANSFERENCIA COMPLETADA EXITOSAMENTE!
+==================================================
+
+DETALLES COMPLETOS:
+- Nombre archivo: prueba.txt
+- Ruta local: C:/Users/Daniel/Desktop/prueba.txt
+- Hash SHA-256: 03c72a1a141cea825d68ba6ac21193c489a6c7d7d636108efaea2e6105f8873f
+- Tamaño original: 33 bytes
+- Tamaño encriptado: 140 bytes
+- Copia encriptada guardada en: C:/Users/Daniel/Desktop/prueba.txt.enc
+- Auditoría guardada en: auditoria.txt
+
+¿Deseas subir otro archivo? (s/n):
