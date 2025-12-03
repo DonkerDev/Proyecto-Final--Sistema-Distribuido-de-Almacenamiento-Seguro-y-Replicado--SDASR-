@@ -1,4 +1,4 @@
-levantar lo que sea xd y ver ip y puerto 
+EJECUCION DEL PROYECTO
 
 PS C:\Users\Daniel\Desktop\proyecto-almacenamiento\kubernetes> kubectl expose deployment servidor-almacenamiento --type=NodePort --port=5000 --name=servicio-almacenamiento
 service/servicio-almacenamiento exposed
@@ -73,5 +73,6 @@ DETALLES COMPLETOS:
 - Tamaño encriptado: 140 bytes
 - Copia encriptada guardada en: C:/Users/Daniel/Desktop/prueba.txt.enc
 - Auditoría guardada en: auditoria.txt
+
 
 ¿Deseas subir otro archivo? (s/n):
